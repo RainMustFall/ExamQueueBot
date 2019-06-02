@@ -27,8 +27,10 @@ class BotHandler:
             result_json = {}
         return result_json
 
-    def send_message(self, text, chat_id):
-        params = {'chat_id': chat_id, 'text': text, 'parse_mode': 'Markdown'}
+    def send_message(self, text, chat_id, markdown = True):
+        params = {'chat_id': chat_id, 'text': text}
+        if markdown:
+            params['parse_mode'] = 'Markdown'
         method = 'sendMessage'
         resp = requests.post(self.api_url + method, params)
         return resp

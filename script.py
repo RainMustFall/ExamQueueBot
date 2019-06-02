@@ -61,7 +61,7 @@ def main():
             greet_bot.send_message(greet_bot.move(last_chat_text[0].split()[1:], last_chat_id), last_chat_id)
             
         if last_chat_text[0].split()[0] == '/exception' or last_chat_text[0].split()[0] == '/exception@exam_queue_bot':
-            raise Exception('Test')
+            raise Exception('Test falling thrown by ' + last_update['message']['from']['username'])
 
         if last_chat_text[0].split()[0] == '/show' or last_chat_text[0].split()[0] == '/show@exam_queue_bot':
             greet_bot.send_message(show_success + greet_bot.list_to_txt(last_chat_id), last_chat_id)
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     try:
         main()
     except Exception as e:
-        greet_bot.send_message(str(type(e)) + str(e), my_chat)
+        greet_bot.send_message(str(type(e)) + str(e), my_chat, markdown = False)
         greet_bot.save()
         greet_bot.send_message('Saved!', my_chat)
         exit()
