@@ -35,8 +35,9 @@ class BotHandler:
 
     def list_to_txt(self, chat_id):
         result_txt = ''
+        index = 1
         for item in self.grouplists[chat_id]:
-            result_txt += item + '\n'
+            result_txt += str(index) + '. ' + item + '\n'
         return result_txt
     
     def get_last_update(self):
