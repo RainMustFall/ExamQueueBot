@@ -16,7 +16,6 @@ class BotHandler:
         with open(pickle_file, 'rb') as f:
             self.grouplists = pickle.load(f)
             f.close()
-        print(self.grouplists)
 
     def get_updates(self, offset=None, timeout=30):
         method = 'getUpdates'

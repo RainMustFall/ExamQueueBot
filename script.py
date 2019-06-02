@@ -28,12 +28,15 @@ def main():
         if not(last_update['ok']):
             continue
 
-        last_update_id = last_update['update_id']
-        last_chat_text = last_update['message']['text']
-        last_chat_id = last_update['message']['chat']['id']
-            
+        try:
+            last_update_id = last_update['update_id']
+            last_chat_text = last_update['message']['text']
+            last_chat_id = last_update['message']['chat']['id']
+        except KeyError:
+            new_offset = last_update_id + 1
+            continue
+
         last_chat_text = last_chat_text.split('\n')
-        print(last_chat_text, last_chat_id)
         
         if not last_chat_id in greet_bot.grouplists or not greet_bot.grouplists[last_chat_id]:
             if last_chat_text[0].strip() in commands_list:
