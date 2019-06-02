@@ -65,6 +65,9 @@ def main():
 
         if last_chat_text[0].split()[0] == '/show' or last_chat_text[0].split()[0] == '/show@exam_queue_bot':
             greet_bot.send_message(show_success + greet_bot.list_to_txt(last_chat_id), last_chat_id)
+
+        if last_chat_text[0].split()[0] == '/info' or last_chat_text[0].split()[0] == '/info@exam_queue_bot':
+            greet_bot.send_message(information, last_chat_id)
             
         new_offset = last_update_id + 1
 
