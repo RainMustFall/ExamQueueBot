@@ -89,7 +89,6 @@ class BotHandler:
             return swap_error
         
         indexes = self.get_numbers(indexes, chat_id)
-        print(indexes)
         if not(self.check_indexes(indexes, chat_id)):
             return swap_error
         
@@ -103,7 +102,6 @@ class BotHandler:
             return move_error
         
         indexes = self.get_numbers(indexes, chat_id)
-        print(indexes)
         if not(self.check_indexes(indexes, chat_id)):
             return move_error
         
