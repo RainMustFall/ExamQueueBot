@@ -1,7 +1,7 @@
-import requests  
+﻿import requests  
 import datetime
 import random
-import pickle
+import pickle 
 
 from bothandler import BotHandler
 from msgstrings import *
