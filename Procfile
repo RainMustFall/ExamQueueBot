@@ -1,1 +1,1 @@
-worker: python script.py
+worker: python script.py INSERT_YOUR_TOKEN_HERE
