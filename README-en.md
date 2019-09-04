@@ -45,7 +45,7 @@ and so on
 
 ```/move Petrov 2```
 
-## How do I run this code at home?
+## How can I run this code on my computer?
 You will need to [create a new bot and get a token] (https://core.telegram.org/bots#6-botfather) for it. After that, for example, for local work, just enter 
 
 ```python script.py INSERT_YOUR_TOKEN_HERE```
