@@ -1,7 +1,6 @@
 flake8==3.8.3
 mypy==0.782
 pytest==6.0.1
-pytest-env==0.6.2
 
 aiogram~=2.14.3
 aioredis~=2.0.0
