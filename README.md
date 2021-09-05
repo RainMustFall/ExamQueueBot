@@ -1,50 +1,59 @@
 # ExamQueueBot
 
-Ну это... Telegram-бот, который сам будет генерить в нашем чатике очередь на экзамены/зачёты и так далее, чтобы препятствовать дискриминации по первой букве фамилии.
+The project is a Telegram bot, which will generate a queue for exams/credits in our chat room and so on, to prevent discrimination on the first letter of the surname.
 
-## Зачем я вообще это делаю?
+## Getting Started
 
-Потому что очень часто приходится забивать куда-то очередь, и ужасно бесит та ситуация, когда все начинают это делать, а тебя в этот момент нет поблизости или ты медленно среагировал и оказался в конце. Или если все решают идти в алфавитном порядке, и ты всегда в самом конце/начале/другом неудобном месте.
-Рандом на страже справедливости!
+Just put my monster (@exam_queue_bot) in a group chat room and have fun.
 
-## Как этим пользоваться?
-
-Запускаешь моего монстра (@exam_queue_bot) в чатик группы и развлекаешься.
-
-### Добавить список группы:
+### Add group list:
 ```
 /setlist
-Имя1
-Имя2
+Name1
+Name2
 ...
-ИмяN
+NameN
 ```
-### Сгенерировать новую очередь:
+### Generate a new queue:
 ```/generate```
 
-### Показать последнюю сгенерированную очередь:
+### Show the last line generated:
 ```/show```
 
-### Поменять двух человек местами:
+### Swap two people:
 ```/swap 1 2```
 
-```/swap Петров Иванов```
+```/swap Petrov Ivanov```
 
-```/swap 1 Иванов```
+```/swap 1 Ivanov```
 
-```/swap Петров 2```
+```/swap Petrov 2```
 
-и так далее
+and so on
 
-### Сдвинуть чувака на новую позицию:
+### Move a person to a new position:
 ```/move 1 2```
 
-```/move Петров Иванов```
+```/move Petrov Ivanov```
 
-```/move 1 Иванов```
+```/move 1 Ivanov```
 
-```/move Петров 2```
+```/move Petrov 2```
 
-## Как запустить этот код у себя?
-Вам потребуется [создать нового бота и получить токен](https://core.telegram.org/bots#6-botfather) для него. После этого, например, для локальной работы, достаточно ввести 
-```python script.py INSERT_YOUR_TOKEN_HERE```
+## Run this code
+
+To install all the required dependencies, use
+
+```pip install --upgrade -r requirements.txt```
+
+You will need to [create a new bot and get a token](https://core.telegram.org/bots#6-botfather) for it. After that, the code can be run by
+
+```BOT_TOKEN=<token> DB_URL=<URL of your Redis database> DB_TOKEN=<password for your Redis database> python3 -m src```
+
+To run unit tests for this code, use
+
+```pytest```
+
+To launch type checking, use
+
+```mypy src```
