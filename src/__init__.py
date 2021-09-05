@@ -4,9 +4,9 @@ from aiogram.utils import executor
 import os
 import typing as tp
 
-import src.message_strings as msgstrings
-from src.database import Database
-from src.utils import parse_args, format_list, do_generate
+import message_strings as msgstrings
+from database import Database
+from utils import parse_args, format_list, do_generate
 
 F = tp.Callable[..., tp.Any]
 bot = Bot(token=os.environ["BOT_TOKEN"], parse_mode="Markdown")
@@ -63,7 +63,7 @@ async def process_set_list(message: types.Message) -> None:
         await message.reply(msgstrings.LIST_CREATION_ERROR)
         return
     await db.set(message.chat.id, people_list)
-    await message.reply(msgstrings.MOVE_SUCCESS + format_list(people_list))
+    await message.reply(msgstrings.SAVE_SUCCESS)
 
 
 @dp.message_handler(commands=["generate"])
