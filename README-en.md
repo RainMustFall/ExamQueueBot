@@ -26,17 +26,17 @@ NameN
 ```/show```
 
 ### Swap two people:
-```swap 1 2```
+```/swap 1 2```
 
-```swap Petrov Ivanov```
+```/swap Petrov Ivanov```
 
-```swap 1 Ivanov```
+```/swap 1 Ivanov```
 
-```swap Petrov 2```
+```/swap Petrov 2```
 
 and so on
 
-### Move the dude to a new position:
+### Move a person to a new position:
 ```/move 1 2```
 
 ```/move Petrov Ivanov```
